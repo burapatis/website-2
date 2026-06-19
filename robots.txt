@@ -1,0 +1,7 @@
+# robots.txt
+# อนุญาตให้ search engine ทุกตัวเข้ามาเก็บข้อมูลหน้าเว็บไซต์ทั้งหมด
+User-agent: *
+Allow: /
+
+# ตำแหน่งของ sitemap (แก้ไขโดเมนให้ตรงกับโดเมนจริงก่อนใช้งาน)
+Sitemap: https://example.com/sitemap.xml
