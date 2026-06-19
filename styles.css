@@ -183,7 +183,15 @@ button:focus-visible {
   gap: 10px;
   color: var(--color-ink);
 }
-.logo-mark { color: var(--color-gold); }
+.logo-mark {
+  flex-shrink: 0;
+  line-height: 0;
+}
+.logo-mark img {
+  display: block;
+  width: auto;
+  height: 40px;
+}
 .logo-text {
   font-family: var(--font-display);
   font-weight: 600;
