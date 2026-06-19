@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  สำคัญ: URL ด้านล่างใช้โดเมน placeholder คือ https://example.com/
-  กรุณาแก้ไขให้เป็นโดเมนจริงของคุณก่อนนำขึ้นใช้งาน (ดูวิธีแก้ไขใน README.md)
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://burapatis.github.io/website-2/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/privacy.html</loc>
+    <loc>https://burapatis.github.io/website-2/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://example.com/terms.html</loc>
+    <loc>https://burapatis.github.io/website-2/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://example.com/content-policy.html</loc>
+    <loc>https://burapatis.github.io/website-2/content-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

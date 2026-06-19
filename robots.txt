@@ -3,5 +3,4 @@
 User-agent: *
 Allow: /
 
-# ตำแหน่งของ sitemap (แก้ไขโดเมนให้ตรงกับโดเมนจริงก่อนใช้งาน)
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://burapatis.github.io/website-2/sitemap.xml

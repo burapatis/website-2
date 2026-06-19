@@ -18,14 +18,17 @@
   function closeMenu() {
     if (!menuToggle || !mainNav) return;
     menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "เปิดเมนู");
     mainNav.classList.remove("is-open");
   }
 
   if (menuToggle && mainNav) {
     menuToggle.addEventListener("click", function () {
       var isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      mainNav.classList.toggle("is-open", !isOpen);
+      var willOpen = !isOpen;
+      menuToggle.setAttribute("aria-expanded", String(willOpen));
+      menuToggle.setAttribute("aria-label", willOpen ? "ปิดเมนู" : "เปิดเมนู");
+      mainNav.classList.toggle("is-open", willOpen);
     });
 
     // ปิดเมนูเมื่อคลิกลิงก์ใด ๆ ในเมนู (เหมาะกับมือถือ)
@@ -76,6 +79,7 @@
 
   /* ---------- ปุ่มกลับขึ้นด้านบน ---------- */
   var backToTop = document.getElementById("backToTop");
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (backToTop) {
     function toggleBackToTop() {
       backToTop.classList.toggle("is-visible", window.scrollY > 480);
@@ -84,7 +88,7 @@
     window.addEventListener("scroll", toggleBackToTop, { passive: true });
 
     backToTop.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
     });
   }
 
