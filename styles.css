@@ -298,7 +298,8 @@ button:focus-visible {
   .signal-dot animateMotion { display: none; }
   .btn:hover,
   .channel-card:hover,
-  .pillar-card:hover { transform: none; }
+  .pillar-card:hover,
+  .promo-card:hover { transform: none; }
 }
 
 /* ---------------------------------------------------------
@@ -318,16 +319,21 @@ button:focus-visible {
 }
 
 .channel-card {
-  background: var(--color-white);
+  background: color-mix(in srgb, var(--accent) 10%, var(--color-white));
   border-radius: var(--radius-lg);
   padding: 32px;
   border-top: 4px solid var(--accent);
+  border-left: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
   box-shadow: var(--shadow-soft);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
   display: flex;
   flex-direction: column;
 }
-.channel-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.channel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  background: color-mix(in srgb, var(--accent) 14%, var(--color-white));
+}
 
 .channel-icon { font-size: 1.8rem; margin-bottom: 14px; }
 .channel-type {
@@ -452,6 +458,25 @@ button:focus-visible {
 .contact { background: var(--color-white); text-align: left; }
 .contact-email { margin: 12px 0 16px; }
 .contact-note { font-size: 0.88rem; color: var(--color-text-soft); }
+
+/* ---------------------------------------------------------
+   Promo card (linked site)
+   --------------------------------------------------------- */
+.app-promo { background: var(--color-paper); padding-top: 0; }
+.promo-card {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-indigo) 8%, var(--color-white)) 0%, var(--color-white) 100%);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-indigo);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.promo-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.promo-card h2 { font-size: clamp(1.25rem, 2.4vw, 1.65rem); margin-bottom: 0.75em; }
+.promo-card p { margin-bottom: 1.25em; }
+.promo-card .btn { margin-top: 4px; }
+.promo-card .btn-outline { --accent: var(--color-indigo); }
 
 /* ---------------------------------------------------------
    Footer
